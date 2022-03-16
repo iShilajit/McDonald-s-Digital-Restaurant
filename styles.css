@@ -1,0 +1,205 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+ 
+  font-family: sans-serif;
+}
+
+#focus {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+#focus > div > img {
+  font-size: 70px;
+
+  width: 90px;
+  height: 60px  ;
+}
+
+#focus > div > i:hover {
+  transform: scale(0.8);
+}
+#focus > div > h1 {
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+#focus > div > h1 > span {
+  color: #fef907;
+}
+
+#focus::before {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #200609;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #290906, #3f060c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #5c0f06, #5c0f06); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  z-index: -1;
+}
+
+#food {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  width: 300px;
+  margin: auto;
+  text-align: left;
+  padding: 20px;
+  color: white;
+  transition: 0.5s ease;
+  border: 1px solid white;
+  margin-top: 20px;
+}
+
+#food > input {
+  width: 16px;
+  height: 16px;
+  margin: 4px;
+  cursor: pointer;
+}
+
+#submit {
+  color: #0e0f09;
+  background-color: rgb(201, 223, 10);
+  outline: none;
+  font-size: 16px;
+  margin-top: 14px;
+  font-weight: bold;
+  border: 1px solid rgb(182, 14, 14);
+  width: 100%;
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;  transition: all 0.2s ease;
+}
+
+#submit:active {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transform: translateY(4px) scale(0.9);
+}
+#submit:hover{
+    color: rgb(199, 26, 26);
+}
+.check{
+    cursor: pointer;
+}
+label:hover{
+    color: yellow;
+}
+
+#focus > .show {
+  color: #fef907;
+  width: 320px;
+  margin: auto;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  transform: scale(0);
+  transition: 0.5s ease;
+  border: 1px solid white;
+}
+
+#focus > .items {
+  width: 70%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  color: #fff;
+  height: fit-content;
+  padding: 20px;
+  transform: scale(0);
+  transition: 0.5s ease;
+}
+
+#focus > .items > div {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#focus > .items > div > img {
+  width: 200px;
+  height: 150px;
+}
+
+#focus > .items > div > p {
+  padding: 10px;
+}
+#focus > .reject {
+  color: #fff;
+  transform: scale(0);
+  margin-bottom: 10px;
+  transition: 0.5s ease;
+}
+#focus > .reject > div {
+  margin: auto;
+}
+#focus > .reject > div > img {
+  width: 40%;
+}
+marquee{
+    color: white;
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    
+}
+marquee>span{
+    color: yellow;
+}
+
+ /* delivery patners */
+
+ #delpatner{
+    display: flex;
+    
+}
+
+#delpatner > img{
+    width: 350px;
+    height: 100px;
+    margin-left: 10px;
+}
+
+
+@media all and (min-width: 50px) and (max-width: 750px) {
+  focus > .items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #focus > div > h1,
+ #focus > div > h2 {
+    font-size: 20px;
+  }
+
+  #focus > div > i {
+    font-size: 44px;
+  }
+  #focus > .reject > div > img {
+    width: 80%;
+  }
+
+  marquee{
+    color: white;
+    margin-top: 20px;
+    font-size: 10px;
+    text-align: center;
+    
+}
+
+  #delpatner > img{
+    width: 85px;
+    height: 40px;
+    margin-left: 10px;
+  }
+}
